@@ -7,8 +7,10 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    "module": "CommonJS",
+    "target": "ES2022",
+    "moduleResolution":"node",
+    "outDir":"./dist",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -38,7 +40,10 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include":["src/**/*","main.ts"]
 }
