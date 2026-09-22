@@ -4,8 +4,8 @@
   "description": "Microservicio emisor de llaves",
   "main": "index.js",
   "scripts": {
-     "test": "echo \"Error: no test specified\" && exit 1"
-    ,"start":"npx ts-node main.ts"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node main.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -25,9 +25,9 @@
   "homepage": "https://github.com/arvera41-lab/token-service#readme",
   "devDependencies": {
     "@types/node": "^26.6.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^7.0.2",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
