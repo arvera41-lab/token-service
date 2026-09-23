@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────
+#  PRISM — Docker Compose
+#  Incluye:
+#    - PostgreSQL 15 (base de datos principal)
+#    - Adminer (UI de administración)
+#    - Red Privada para futuros Microservicios (red_prisma)
+# ─────────────────────────────────────────────────────────────
+services:
+
+  postgres:
+    image: pgvector/pgvector:pg15
+    container_name: prism_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       localdb
+      POSTGRES_USER:     localdb
+      POSTGRES_PASSWORD: Abc12345
+    ports:
+      - "5436:5432"
+    volumes:
+      - prism_pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -p 5432 -U localdb -d localdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - red_prisma
+
+  # Adminer — UI ligero para administrar la BD (opcional)
+  adminer:
+    image: adminer:latest
+    container_name: prism_adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - red_prisma
+
+networks:
+  red_prisma:
+    driver: bridge
+
+volumes:
+  prism_pgdata:
