@@ -1,6 +1,6 @@
 import {Router,Request, Response} from 'express';
 import {ITokenService} from '../interfaces/auth.interface';
-import {LoginDTO} from '../dtos/auth.dto';
+import {ILoginDTO, LoginDTO} from '../dtos/auth.dto';
 import { log } from 'node:console';
 
 export class AuthController{
@@ -22,9 +22,10 @@ export class AuthController{
         console.log(`[AUTH CONTROLLER]: Petición de generación de llave recibida.`);
         try{
                 // 1. Capturamos los campos que el usuario manda en el body de Postman
-                const {usuario,contrasenia} = req.body;
+                const {vl_usuario,vl_contrasenia} = req.body;
                 // 2. Empaquetamos los datos en un DTO
-                const loginDto = new LoginDTO(usuario,contrasenia);
+                const datos:ILoginDTO = {usuario:vl_usuario,contrasenia:vl_contrasenia}; 
+                const loginDto = new LoginDTO(datos);
                 // 3. Validamos credenciales
                 const isvalido = this.service.validarCredencialesMaestras(loginDto);
                 if(!isvalido){
