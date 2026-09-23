@@ -8,8 +8,8 @@
     "start": "npx ts-node main.ts"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.23.0"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/arvera41-lab/token-service#readme",
   "devDependencies": {
     "@types/node": "^26.6.2",
-    "dotenv": "^16.4.5",
+    "@types/pg": "^8.23.1",
+    "dotenv": "^16.6.1",
     "express": "^4.19.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
