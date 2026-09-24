@@ -1,0 +1,107 @@
+[
+  {
+    "fiid": 1,
+    "fcnombre": "user01",
+    "fiidedad": 25,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 2,
+    "fcnombre": "user02",
+    "fiidedad": 16,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 3,
+    "fcnombre": "user03",
+    "fiidedad": 21,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 4,
+    "fcnombre": "user04",
+    "fiidedad": 25,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 5,
+    "fcnombre": "user05",
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 6,
+    "fcnombre": "user06",
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 7,
+    "fcnombre": "user07",
+    "fiidedad": 22,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 8,
+    "fcnombre": "user08",
+    "fiidedad": 15,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 9,
+    "fcnombre": "user09",
+    "fiidedad": 21,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 10,
+    "fcnombre": "user10",
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 16,
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 17,
+    "fiidedad": 22,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 19,
+    "fiidedad": 21,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 20,
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 16,
+    "fiidedad": 32,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 17,
+    "fiidedad": 22,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 8,
+    "fiidedad": 15,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 19,
+    "fiidedad": 21,
+    "fiidstatus": 1
+  },
+  {
+    "fiid": 20,
+    "fiidedad": 32,
+    "fiidstatus": 1
+  }
+]

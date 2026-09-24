@@ -1,0 +1,23 @@
+[
+  {
+    "id_token": 101,
+    "codigo_llave": "JSON-TOKEN-XYZ",
+    "nombre_usuario": "usuario_archivo",
+    "clave_secreta": "hash12345",
+    "activo": true
+  },
+  {
+    "id_token": 102,
+    "codigo_llave": "JSON-TOKEN-ABC",
+    "nombre_usuario": "segundo_archivo",
+    "clave_secreta": "hash67890",
+    "activo": false
+  },
+  {
+    "id_token": 103,
+    "codigo_llave": "JSON-TOKEN-123",
+    "nombre_usuario": "tercer_archivo",
+    "clave_secreta": "hash67290",
+    "activo": false
+  }
+]
