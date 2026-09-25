@@ -24,7 +24,7 @@ const datanew:IRawData[] = JSON.parse(datanewraw);
 const dbdata:IJSONData[] =  datanew.map((item)=>{
     return {
         fiid       :item.id
-       ,fcnombre   :item.name
+       ,fcnombre   :item.nombre
        ,fiidedad   :item.edad
        ,fiidstatus :item.status
     }
@@ -39,24 +39,48 @@ console.log(dbdata);
 //     return !istrue;
 // });
 // datosPalpables.push(...nuevoarreglo);
+console.log('-------------------------------------------');
+console.log('Validación de existencia de datos:');
 dbdata.forEach((x)=>{
     const existente= datosPalpables.find((y)=>{
-        y.fiid === x.fiid
+        return y.fiid === x.fiid
     });
     if(existente){
-        existente.fcnombre = x.fcnombre;
-        existente.fiidedad = x.fiidedad;
-        existente.fiidstatus = x.fiidstatus;
-        console.log(`Registro actualizado: ${existente.fiid}`);
+        let count=0;
+        if(existente.fcnombre !== x.fcnombre){
+            existente.fcnombre = x.fcnombre;
+            count=count+1;
+        }else if(existente.fiidedad !== x.fiidedad){
+            existente.fiidedad = x.fiidedad;
+            count=count+1;
+        }else if(existente.fiidstatus !== x.fiidstatus){
+            existente.fiidstatus = x.fiidstatus;
+            count=count+1;
+        }
+
+        if(count > 0 ){
+            console.log(`Registro actualizado: ${existente.fiid}`);
+        }else{
+            console.log(`Registro ${existente.fiid} existente, no se actualizó ningun campo`);
+        }
+        
     }else {
         datosPalpables.push(x);
         console.log(`Nuevo registro insertado: ${x.fiid}`);
     }
 });
+console.log('-------------------------------------------');
 console.log('Contenido:');
 console.log(datosPalpables);
+console.log('-------------------------------------------');
+
+console.log('Inserción de datos en archivo JSON...')
 
 const textofinal = JSON.stringify(datosPalpables,null,2);
 
+console.log(`Datos a insertar en el archivo: ${rootfile2}`);
+console.log(textofinal);
+console.log('-------------------------------------------');
 fs.writeFileSync(rootfile2,textofinal,'utf-8');
+console.log('-------------------------------------------');
 console.log('Datos guardados en archivo');

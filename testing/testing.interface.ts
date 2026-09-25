@@ -1,7 +1,7 @@
 
 export interface IRawData{
     id:number;
-    name:string;
+    nombre:string;
     edad?:number;
     status:number;
 }

@@ -8,8 +8,10 @@
     "start": "npx ts-node main.ts"
   },
   "dependencies": {
+    "@balda/json-db-service": "file:../libs/mi-libreria-json/balda-json-db-service-1.0.0.tgz",
     "express": "^4.19.2",
-    "pg": "^8.23.0"
+    "pg": "^8.23.0",
+    "zod": "^4.6.5"
   },
   "repository": {
     "type": "git",
